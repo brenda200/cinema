@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual filme vamos assistir</title>
+    <!-- Link para o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Qual filme vamos assistir?</h1>
+        <div class="card-group">
+            <div class="card" id="filme1" data-titulo="Pobres Criaturas" data-descricao="&quot;Pobres Criaturas&quot; combina elementos de romance e ficção científica de uma forma única, especialmente com essa reviravolta envolvendo a substituição do cérebro da protagonista. Com um elenco tão talentoso e um enredo que remete a clássicos da literatura como &quot;Frankenstein&quot;, certamente desperta interesse. Yorgos Lanthimos é conhecido por suas abordagens originais e provocativas, então é empolgante ver como ele aborda esse material.">
+                <img src="img/Pobres Criaturas.jpg" class="card-img-top" alt="Pobres Criaturas">
+                <div class="card-body">
+                    <h5 class="card-title">Pobres Criaturas</h5>
+                    <p class="card-text">"Pobres Criaturas" combina elementos de romance e ficção científica de uma forma única, especialmente com essa reviravolta envolvendo a substituição do cérebro da protagonista. Com um elenco tão talentoso e um enredo que remete a clássicos da literatura como "Frankenstein", certamente desperta interesse. Yorgos Lanthimos é conhecido por suas abordagens originais e provocativas, então é empolgante ver como ele aborda esse material.</p>
+                    <button class="btn btn-primary btnEscolherFilme">Esse</button>
+                </div>
+            </div>
+            <div class="card" id="filme2" data-titulo="Minha Irmã e Eu" data-descricao="As irmãs Mirian (Ingrid) e Mirelly (Tatá Werneck) nasceram em Rio Verde, no interior de Goiás. Elas não realizaram o sonho da mãe, Dona Márcia (Arlete Salles), de se tornarem uma dupla sertaneja e, além de terem seguido caminhos opostos, vivem em pé de guerra. Mirian se casou e nunca saiu de sua cidade, acostumada à rotina do interior. Já Mirelly partiu para o Rio de Janeiro e sem demonstrar para família, passa todo o tipo de perrengue. Mas quando Dona Márcia desaparece, elas têm que deixar de lado as diferenças e se unir para procurá-la, numa viagem que pode mudar suas vidas.">
+                <img src="img/Minha Irmã e Eu.webp" class="card-img-top" alt="Minha Irmã e Eu">
+                <div class="card-body">
+                    <h5 class="card-title">Minha Irmã e Eu</h5>
+                    <p class="card-text">As irmãs Mirian (Ingrid) e Mirelly (Tatá Werneck) nasceram em Rio Verde, no interior de Goiás. Elas não realizaram o sonho da mãe, Dona Márcia (Arlete Salles), de se tornarem uma dupla sertaneja e, além de terem seguido caminhos opostos, vivem em pé de guerra. Mirian se casou e nunca saiu de sua cidade, acostumada à rotina do interior. Já Mirelly partiu para o Rio de Janeiro e sem demonstrar para família, passa todo o tipo de perrengue. Mas quando Dona Márcia desaparece, elas têm que deixar de lado as diferenças e se unir para procurá-la, numa viagem que pode mudar suas vidas.</p>
+                    <button class="btn btn-primary btnEscolherFilme">Esse</button>
+                </div>
+            </div>
+            <div class="card" id="filme3" data-titulo="Todos Menos Você" data-descricao="Baseado na comédia de William Shakespeare, &quot;Much Ado About Nothing&quot;, &quot;Todos Menos Você&quot; é um longa que acompanha Bea (Sydney Sweeney) e Ben (Glen Powell), dois jovens que combinam um encontro após se esbarrarem nos corredores da faculdade em que estudam. Em uma noite quase perfeita, o jovem casal possui tudo para manter o contato: química, uma boa conversa e um incrível desejo um pelo outro. No entanto, o primeiro encontro não passa disso, e a relação de ambos se esfria até pararem de se falar. Anos após a formatura...">
+                <img src="img/Todos Menos Você.webp" class="card-img-top" alt="Todos Menos Você">
+                <div class="card-body">
+                    <h5 class="card-title">Todos Menos Você</h5>
+                    <p class="card-text">Baseado na comédia de William Shakespeare, "Much Ado About Nothing", "Todos Menos Você" é um longa que acompanha Bea (Sydney Sweeney) e Ben (Glen Powell), dois jovens que combinam um encontro após se esbarrarem nos corredores da faculdade em que estudam. Em uma noite quase perfeita, o jovem casal possui tudo para manter o contato: química, uma boa conversa e um incrível desejo um pelo outro. No entanto, o primeiro encontro não passa disso, e a relação de ambos se esfria até pararem de se falar. Anos após a formatura...</p>
+                    <button class="btn btn-primary btnEscolherFilme">Esse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript do Bootstrap (opcional, dependendo do uso) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-WlsOVpqp6wMBS7bdT6YuB9z0yKrSkIh/zWL29JJosVnFJvyl6e7PqKw2HMd2dhYI" crossorigin="anonymous"></script> -->
+
+    <script>
+        // Função para enviar mensagem para o WhatsApp
+        function enviarMensagemParaWhatsApp(titulo, descricao) {
+            const mensagemPersonalizada = "Olá! Vamos ao cinema? sim, Decidimos assistir a este filme: ";
+            const mensagem = mensagemPersonalizada + `"${titulo}"? Sinopse: ${descricao}`;
+            // Substitua SEUNUMERODOTELEFONE pelo seu número de telefone no formato internacional
+            const numeroDestinatario = '5591991323091';
+            const mensagemEncoded = encodeURIComponent(mensagem);
+            window.open(`https://wa.me/${numeroDestinatario}?text=${mensagemEncoded}`, '_blank');
+        }
+
+        // Adicionando evento de clique aos botões dos filmes
+        const btnsEscolherFilme = document.querySelectorAll('.btnEscolherFilme');
+        btnsEscolherFilme.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const titulo = this.closest('.card').getAttribute('data-titulo');
+                const descricao = this.closest('.card').getAttribute('data-descricao');
+                enviarMensagemParaWhatsApp(titulo, descricao);
+            });
+        });
+    </script>
+    <body style="background-color: #577e68;">
+
+</body>
+</html>
